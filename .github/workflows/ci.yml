@@ -1,1 +1,11 @@
-
+yaml
+name: Node.is CI Pipeline
+#Trigger the pipeline on any push or pull request to the main branch on:
+push:
+branches: ["main"]
+pull_request:
+branches: ["main"]
+jobs:
+build-and-test:
+#use a fresh, hosted ubuntu linux machine
+runs-on: ubuntu-latest
